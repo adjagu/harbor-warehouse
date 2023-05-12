@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+
+  Name    : Harbor Warehouse
+  Author  : adjagu
+  License : GPL-2.0-only
+  Version : 0.0.1
+
+
+-->
+<ModOps>
+  <!--
+
+
+    Add Building to Game
+
+
+  -->
+  <ModOp
+    GUID="112670"
+    Type="AddNextSibling"
+  >
+    <Asset>
+      <Template>HarborDepot</Template>
+      <Values>
+
+        <Standard>
+          <GUID>1337471184</GUID>
+          <Name>harbor_warehouse_ar</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_depot.png</IconFilename>
+          <InfoDescription>1337471185</InfoDescription>
+        </Standard>
+
+        <AmbientMoodProvider>
+          <Murmur>Warehouse</Murmur>
+        </AmbientMoodProvider>
+
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <DefenseByAIFactor>151</DefenseByAIFactor>
+          <ExplosionEffects>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborDepot</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>1</ExplosionEffectsMin>
+          <ExplosionEffectsMax>2</ExplosionEffectsMax>
+          <HasRuinState>1</HasRuinState>
+          <HPBarOffset>8</HPBarOffset>
+          <IslandWarFlag>102303</IslandWarFlag>
+          <MaximumHitPoints>3000</MaximumHitPoints>
+          <MoralePower>25</MoralePower>
+          <PausedTimeIfAttacked>0</PausedTimeIfAttacked>
+          <RuinSmokeParticles>
+            <Item>
+              <SmokeParticleFilePath>data/graphics/effects/military/explosions/damage_smoke_01.cfg</SmokeParticleFilePath>
+            </Item>
+          </RuinSmokeParticles>
+          <RuinSmokeParticlesMin>1</RuinSmokeParticlesMin>
+          <RuinSmokeParticlesMax>4</RuinSmokeParticlesMax>
+          <RuinSmokeParticleRectBorderPercent>0.2</RuinSmokeParticleRectBorderPercent>
+          <SelfHealPerHealTick>5</SelfHealPerHealTick>
+        </Attackable>
+
+        <Blocking>
+          <GroundDecalAsset>114826</GroundDecalAsset>
+          <GroundDecalInvisible>113478</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+
+        <Building>
+          <AllowChangeVariation>0</AllowChangeVariation>
+          <AssociatedRegions>Arctic</AssociatedRegions>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+          <TerrainType>Coast</TerrainType>
+        </Building>
+
+        <Constructable />
+
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>2500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+            </Item>
+          </Costs>
+        </Cost>
+
+        <FeedbackController>
+          <NightBehavior>HideNone</NightBehavior>
+        </FeedbackController>
+
+        <Infolayer />
+
+        <Locked />
+
+        <LogisticNode>
+          <TransporterCountMax>0</TransporterCountMax>
+          <QueueConfiguration>
+            <ProcessingQueueParallelCount>2</ProcessingQueueParallelCount>
+          </QueueConfiguration>
+        </LogisticNode>
+
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>50</Amount>
+              <InactiveAmount>50</InactiveAmount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+
+        <Mesh />
+
+        <Object>
+          <IgnoreForMinimapGeneration>1</IgnoreForMinimapGeneration>
+          <Skins>
+            <DefaultSkinName>1337471184</DefaultSkinName>
+            <DefaultSkinDescription>23853</DefaultSkinDescription>
+            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+          </Skins>
+          <Variations>
+            <Item>
+              <Filename>data/dlc03/graphics/buildings/special/harbor_colony03_01/harbor_colony03_01.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+
+        <Pausable />
+
+        <Selection>
+          <AllowedDragType>ItemSocket;CargoProductStack;CargoItemStack;SharedTransferItem</AllowedDragType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+          <GUIType>Warehouse</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageTrigger>ClickKontor</ParticipantMessageTrigger>
+        </Selection>
+
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>200896</Sound>
+            </Item>
+            <Item>
+              <Sound>200892</Sound>
+            </Item>
+          </ActiveSounds>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+          <BuildingRuined>
+            <Item>
+              <Sound>203848</Sound>
+            </Item>
+          </BuildingRuined>
+          <ConstructionSounds>
+            <BuildFailed>
+              <Item>
+                <Sound>9818387</Sound>
+              </Item>
+            </BuildFailed>
+            <BuildSuccessful>
+              <Item>
+                <VectorElement>
+                  <InheritedIndex>0</InheritedIndex>
+                </VectorElement>
+                <Sound>214784</Sound>
+              </Item>
+            </BuildSuccessful>
+            <BuildMoveEnd>
+              <Item>
+                <Sound>200141</Sound>
+              </Item>
+            </BuildMoveEnd>
+            <BuildMoveStart>
+              <Item>
+                <Sound>9818755</Sound>
+              </Item>
+            </BuildMoveStart>
+            <BuildMoveSuccess>
+              <Item>
+                <Sound>203995</Sound>
+              </Item>
+            </BuildMoveSuccess>
+          </ConstructionSounds>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+          <IncidentSounds>
+            <ExplosionOneShots>
+              <Item>
+                <Sound>203849</Sound>
+              </Item>
+            </ExplosionOneShots>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+        </SoundEmitter>
+
+        <StorageBase>
+          <ProductStorageList>120055</ProductStorageList>
+        </StorageBase>
+
+        <UpgradeList />
+
+        <Warehouse>
+          <StorageType>Warehouse</StorageType>
+          <WarehouseStorage>
+            <StorageMax>100</StorageMax>
+          </WarehouseStorage>
+        </Warehouse>
+
+      </Values>
+    </Asset>
+  </ModOp>
+  <!--
+
+
+    Add Building to FeedbackBalancingArctic
+
+
+  -->
+  <ModOp
+    GUID="142725"
+    Path="/Values/FeedbackSessionDescription/HarborConfig/SpawnBuildings/Item[BuildingAsset='112670']"
+    Type="AddNextSibling"
+  >
+    <Item>
+      <BuildingAsset>1337471184</BuildingAsset>
+      <WorkerAmount>3</WorkerAmount>
+    </Item>
+  </ModOp>
+  <!--
+
+
+    Add Building to ItemEffectTargetPool
+
+    Pool : all buildings with maintenance DLC11
+
+
+  -->
+  <ModOp
+    GUID="368"
+    Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs"
+    Type="Add"
+  >
+    <Item>
+      <GUID>1337471184</GUID>
+    </Item>
+  </ModOp>
+  <!--
+
+
+    Add Building to Menu
+
+    ConstructionCategory : arctic construction menu harbour (tier)
+
+
+  -->
+  <ModOp
+    GUID="112792"
+    Path="/Values/ConstructionCategory/BuildingList/Item[Building='112670']"
+    Type="AddNextSibling"
+  >
+    <Item>
+      <Building>1337471184</Building>
+    </Item>
+  </ModOp>
+  <!--
+
+
+    Add Building to Menu
+
+    ConstructionCategory : arctic construction menu harbour (category)
+
+
+  -->
+  <ModOp
+    GUID="116345"
+    Path="/Values/ConstructionCategory/BuildingList/Item[Building='112670']"
+    Type="AddNextSibling"
+  >
+    <Item>
+      <Building>1337471184</Building>
+    </Item>
+  </ModOp>
+  <!--
+
+
+    Add Unhide Trigger
+
+    Trigger   : Intermediate Arctic 1.3
+
+
+  -->
+  <ModOp GUID="112647" Type="AddNextSibling">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1337471186</GUID>
+          <Name>Intermediate Arctic 1.3</Name>
+          <IconFilename>data/ui/2kimages/main/profiles/resident_colony_tier01.png</IconFilename>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>112642</Context>
+                <CounterAmount>500</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
+                        <Asset>1337471184</Asset>
+                      </Item>
+                    </UnhideAssets>
+                    <UnlockAssets />
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+          <ResetTrigger>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <EmptyAutoCreateValue />
+            </Values>
+          </ResetTrigger>
+        </Trigger>
+        <TriggerSetup>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!--
+
+
+    Add Unhide Trigger Creative
+
+    Trigger   : Intermediate Arctic 1.3
+
+    GameMode  : Creative
+
+
+  -->
+  <ModOp GUID="12022" Type="AddNextSibling">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1337471187</GUID>
+          <Name>Intermediate Arctic 1.3</Name>
+          <IconFilename>data/ui/2kimages/main/profiles/resident_colony_tier01.png</IconFilename>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Values>
+              <ConditionPropsNegatable />
+              <Condition />
+              <ConditionIsCreativeMode />
+            </Values>
+            <Template>ConditionIsCreativeMode</Template>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
+                        <Asset>1337471184</Asset>
+                      </Item>
+                    </UnhideAssets>
+                    <UnlockAssets />
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+          <ResetTrigger>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <EmptyAutoCreateValue />
+            </Values>
+          </ResetTrigger>
+        </Trigger>
+        <TriggerSetup>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!--
+
+
+    Add Unlock Trigger
+
+    Trigger   : Intermediate Arctic 2.0
+
+
+  -->
+  <ModOp GUID="112648" Type="AddNextSibling">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1337471188</GUID>
+          <Name>Intermediate Arctic 2.0</Name>
+          <IconFilename>data/ui/2kimages/main/profiles/resident_colony_tier01.png</IconFilename>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>112643</Context>
+                <CounterAmount>1</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets />
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1337471184</Asset>
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+          <ResetTrigger>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <EmptyAutoCreateValue />
+            </Values>
+          </ResetTrigger>
+        </Trigger>
+        <TriggerSetup>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!--
+
+
+    Add Unlock Trigger Creative
+
+    Trigger   : Intermediate Arctic 2.0
+
+    GameMode  : Creative
+
+
+  -->
+  <ModOp GUID="12023" Type="AddNextSibling">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1337471189</GUID>
+          <Name>Intermediate Arctic 2.0</Name>
+          <IconFilename>data/ui/2kimages/main/profiles/resident_colony_tier01.png</IconFilename>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Values>
+              <ConditionPropsNegatable />
+              <Condition />
+              <ConditionIsCreativeMode />
+            </Values>
+            <Template>ConditionIsCreativeMode</Template>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets />
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>1337471184</Asset>
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+          <ResetTrigger>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <EmptyAutoCreateValue />
+            </Values>
+          </ResetTrigger>
+        </Trigger>
+        <TriggerSetup>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!--
+
+
+    iModYourAnno Tweaking
+
+
+  -->
+  <Include File="../../../../../include/tweaks.xml" />
+  <!--
+
+
+    That's all folks...
+
+
+  -->
+</ModOps>

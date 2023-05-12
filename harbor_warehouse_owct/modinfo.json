@@ -1,0 +1,21 @@
+{
+  "Version": "0.0.1",
+  "License": "GPL-2.0-only",
+  "ModID": "HudsonsBayCompany_HarborWarehouse_OWCT",
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Gameplay"
+  },
+  "ModName": {
+    "English": "Harbor Warehouse Old World and Cape Trelawney"
+  },
+  "Description": {
+    "English": "The harbor warehouse is a functional copy of the depot with some notable differences. AI controlled players can not build harbor warehouses. Further modification can be enabled with the use of iModYourAnno's tweaking tool."
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "adjagu",
+  "CreatorContact": null,
+  "Image": null
+}

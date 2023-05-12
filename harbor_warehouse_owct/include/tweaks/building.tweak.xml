@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+
+  Name    : Harbor Warehouse
+  Author  : adjagu
+  License : GPL-2.0-only
+  Version : 0.0.1
+
+
+-->
+<ModOps>
+
+  <ImyaTweaks Title="Building" />
+
+  <ModOp
+    GUID="1337471166"
+    Path="/Values/Building"
+    Type="Merge"
+    ModOpID="1337471166_TerrainType"
+  >
+    <TerrainType>Water_Including_Coast</TerrainType>
+  </ModOp>
+
+  <ImyaExpose
+    Path="self::TerrainType"
+    ModOpID="1337471166_TerrainType"
+    ExposeID="Terrain Type"
+    Description="Terrain type building is allowed to be built upon. Default is Water_Including_Coast."
+    Kind="Enum"
+  >
+    <FixedValues>
+      <Value>Coast</Value>
+      <Value>Water_Including_Coast</Value>
+    </FixedValues>
+  </ImyaExpose>
+  <!--
+
+
+    That's all folks...
+
+
+  -->
+</ModOps>

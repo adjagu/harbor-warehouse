@@ -1,0 +1,7 @@
+1337471178 : Harbor Warehouse : AF : Building
+1337471179 : Harbor Warehouse : AF : InfoDescription
+
+1337471180 : Harbor Warehouse : AF : Unhide : Trigger
+1337471181 : Harbor Warehouse : AF : Unhide : Trigger Creative
+1337471182 : Harbor Warehouse : AF : Unlock : Trigger
+1337471183 : Harbor Warehouse : AF : Unlock : Trigger Creative

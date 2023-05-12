@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+
+  Name    : Harbor Warehouse
+  Author  : adjagu
+  License : GPL-2.0-only
+  Version : 0.0.1
+
+
+-->
+<ModOps>
+  <!--
+
+
+    Add Building to Game
+
+
+  -->
+  <ModOp
+    GUID="101278"
+    Type="AddNextSibling"
+  >
+    <Asset>
+      <Template>HarborDepot</Template>
+      <Values>
+
+        <Standard>
+          <GUID>1337471172</GUID>
+          <Name>harbor_warehouse_nw</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_depot.png</IconFilename>
+          <InfoDescription>1337471173</InfoDescription>
+        </Standard>
+
+        <AmbientMoodProvider>
+          <Murmur>Harbor</Murmur>
+        </AmbientMoodProvider>
+
+        <Attackable>
+          <AttackableType>HarbourBuilding</AttackableType>
+          <DefenseByAIFactor>151</DefenseByAIFactor>
+          <ExplosionEffects>
+            <Item>
+              <VectorElement>
+                <InheritedIndex>0</InheritedIndex>
+                <InheritanceMapV2>
+                  <Entry>
+                    <TemplateName>HarborDepot</TemplateName>
+                    <Index>0</Index>
+                  </Entry>
+                </InheritanceMapV2>
+              </VectorElement>
+              <ExplosionEffectFilePath>data/graphics/effects/military/explosions/harbor_generic_xpl_02.cfg</ExplosionEffectFilePath>
+            </Item>
+          </ExplosionEffects>
+          <ExplosionEffectsMin>1</ExplosionEffectsMin>
+          <ExplosionEffectsMax>2</ExplosionEffectsMax>
+          <HasRuinState>1</HasRuinState>
+          <HPBarOffset>8</HPBarOffset>
+          <IslandWarFlag>102303</IslandWarFlag>
+          <MaximumHitPoints>3000</MaximumHitPoints>
+          <MoralePower>25</MoralePower>
+          <PausedTimeIfAttacked>0</PausedTimeIfAttacked>
+          <RuinSmokeParticles>
+            <Item>
+              <SmokeParticleFilePath>data/graphics/effects/military/explosions/damage_smoke_01.cfg</SmokeParticleFilePath>
+            </Item>
+          </RuinSmokeParticles>
+          <RuinSmokeParticlesMin>1</RuinSmokeParticlesMin>
+          <RuinSmokeParticlesMax>4</RuinSmokeParticlesMax>
+          <RuinSmokeParticleRectBorderPercent>0.2</RuinSmokeParticleRectBorderPercent>
+          <SelfHealPerHealTick>5</SelfHealPerHealTick>
+        </Attackable>
+
+        <Blocking>
+          <GroundDecalAsset>102460</GroundDecalAsset>
+          <GroundDecalInvisible>102459</GroundDecalInvisible>
+          <HasBuildingBaseTiles>1</HasBuildingBaseTiles>
+        </Blocking>
+
+        <Building>
+          <AllowChangeVariation>1</AllowChangeVariation>
+          <AssociatedRegions>Colony01</AssociatedRegions>
+          <BuildingCategoryName>11150</BuildingCategoryName>
+          <BuildModeRandomRotation>180</BuildModeRandomRotation>
+          <SecondPartyRelevant>0</SecondPartyRelevant>
+          <TerrainType>Water_Including_Coast</TerrainType>
+        </Building>
+
+        <Constructable />
+
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>2500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient>
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010218</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010207</Ingredient>
+            </Item>
+            <Item>
+              <Ingredient>1010202</Ingredient>
+            </Item>
+          </Costs>
+        </Cost>
+
+        <FeedbackController>
+          <NightBehavior>HideNone</NightBehavior>
+        </FeedbackController>
+
+        <Infolayer />
+
+        <Locked />
+
+        <LogisticNode>
+          <TransporterCountMax>0</TransporterCountMax>
+          <QueueConfiguration>
+            <ProcessingQueueParallelCount>2</ProcessingQueueParallelCount>
+          </QueueConfiguration>
+        </LogisticNode>
+
+        <Maintenance>
+          <Maintenances>
+            <Item>
+              <Product>1010017</Product>
+              <Amount>20</Amount>
+              <InactiveAmount>20</InactiveAmount>
+            </Item>
+          </Maintenances>
+        </Maintenance>
+
+        <Mesh />
+
+        <Object>
+          <IgnoreForMinimapGeneration>1</IgnoreForMinimapGeneration>
+          <Skins>
+            <DefaultSkinName>1337471172</DefaultSkinName>
+            <DefaultSkinDescription>23853</DefaultSkinDescription>
+            <DefaultSkinCategoryName>7312</DefaultSkinCategoryName>
+          </Skins>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_01_colony_01/harbor_01_colony_01.cfg</Filename>
+            </Item>
+            <Item>
+              <Filename>data/graphics/buildings/special/harbor_01_colony_01/harbor_01_colony_01_var02.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+
+        <Pausable />
+
+        <Selection>
+          <AllowedDragType>ItemSocket;CargoProductStack;CargoItemStack;SharedTransferItem</AllowedDragType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+          <GUIType>Warehouse</GUIType>
+          <OnSelection>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <ActionList />
+            </Values>
+          </OnSelection>
+          <ParticipantMessageTrigger>ClickKontor</ParticipantMessageTrigger>
+        </Selection>
+
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>200896</Sound>
+            </Item>
+            <Item>
+              <Sound>200892</Sound>
+            </Item>
+          </ActiveSounds>
+          <BuildingRepaired>
+            <Item>
+              <Sound>203866</Sound>
+            </Item>
+          </BuildingRepaired>
+          <BuildingRuined>
+            <Item>
+              <Sound>203848</Sound>
+            </Item>
+          </BuildingRuined>
+          <ConstructionSounds>
+            <BuildFailed>
+              <Item>
+                <Sound>9818387</Sound>
+              </Item>
+            </BuildFailed>
+            <BuildSuccessful>
+              <Item>
+                <VectorElement>
+                  <InheritedIndex>0</InheritedIndex>
+                </VectorElement>
+                <Sound>214784</Sound>
+              </Item>
+            </BuildSuccessful>
+            <BuildMoveEnd>
+              <Item>
+                <Sound>200141</Sound>
+              </Item>
+            </BuildMoveEnd>
+            <BuildMoveStart>
+              <Item>
+                <Sound>9818755</Sound>
+              </Item>
+            </BuildMoveStart>
+            <BuildMoveSuccess>
+              <Item>
+                <Sound>203995</Sound>
+              </Item>
+            </BuildMoveSuccess>
+          </ConstructionSounds>
+          <DestroySounds>
+            <Item>
+              <Sound>9818756</Sound>
+            </Item>
+          </DestroySounds>
+          <IncidentSounds>
+            <ExplosionOneShots>
+              <Item>
+                <Sound>203849</Sound>
+              </Item>
+            </ExplosionOneShots>
+            <InfectedFire>
+              <Item>
+                <Sound>214659</Sound>
+              </Item>
+            </InfectedFire>
+          </IncidentSounds>
+        </SoundEmitter>
+
+        <StorageBase>
+          <ProductStorageList>120055</ProductStorageList>
+        </StorageBase>
+
+        <UpgradeList />
+
+        <Warehouse>
+          <StorageType>Warehouse</StorageType>
+          <WarehouseStorage>
+            <StorageMax>100</StorageMax>
+          </WarehouseStorage>
+        </Warehouse>
+
+      </Values>
+    </Asset>
+  </ModOp>
+  <!--
+
+
+    Add Building to AssetPool
+
+    Pool : asset pool colony01 sail shipyard
+
+
+  -->
+  <ModOp
+    GUID="130106"
+    Path="/Values/AssetPool/AssetList"
+    Type="Add"
+  >
+    <Item>
+      <Asset>1337471172</Asset>
+    </Item>
+  </ModOp>
+  <!--
+
+
+    Add Building to ItemEffectTargetPool
+
+    Pool : all buildings with maintenance DLC11
+
+
+  -->
+  <ModOp
+    GUID="368"
+    Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs"
+    Type="Add"
+  >
+    <Item>
+      <GUID>1337471172</GUID>
+    </Item>
+  </ModOp>
+  <!--
+
+
+    Add Building to ItemEffectTargetPool
+
+    Pool : all harbour buildings
+
+
+  -->
+  <ModOp
+    GUID="191508"
+    Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs"
+    Type="Add"
+  >
+    <Item>
+      <GUID>1337471172</GUID>
+    </Item>
+  </ModOp>
+  <!--
+
+
+    Add Building to ItemEffectTargetPool
+
+    Pool : all depots
+
+
+  
+  <ModOp
+    GUID="193866"
+    Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs"
+    Type="Add"
+  >
+    <Item>
+      <GUID>1337471172</GUID>
+    </Item>
+  </ModOp>
+  -->
+  <!--
+
+
+    Add Building to Menu
+
+    ConstructionCategory : sa construction menu harbour 01 (tier)
+
+
+  -->
+  <ModOp
+    GUID="501007"
+    Path="/Values/ConstructionCategory/BuildingList/Item[Building='101278']"
+    Type="AddNextSibling"
+  >
+    <Item>
+      <Building>1337471172</Building>
+    </Item>
+  </ModOp>
+  <!--
+
+
+    Add Building to Menu
+
+    ConstructionCategory : OLD - sa construction menu harbour (category)
+
+
+  -->
+  <ModOp
+    GUID="25000195"
+    Path="/Values/ConstructionCategory/BuildingList/Item[Building='101278']"
+    Type="AddNextSibling"
+  >
+    <Item>
+      <Building>1337471172</Building>
+    </Item>
+  </ModOp>
+  <!--
+
+
+    Add Building to Menu
+
+    ConstructionCategory : sa construction menu harbour (category)
+
+
+  -->
+  <ModOp
+    GUID="500149"
+    Path="/Values/ConstructionCategory/BuildingList/Item[Building='101278']"
+    Type="AddNextSibling"
+  >
+    <Item>
+      <Building>1337471172</Building>
+    </Item>
+  </ModOp>
+  <!--
+
+
+    Add Building to HarbourOfficeBuff
+
+    Buff : Hacienda - Decree 3 Buff
+
+
+  -->
+  <ModOp
+    GUID="25687"
+    Path="/Values/ItemEffect/EffectTargets"
+    Type="Add"
+  >
+    <Item>
+      <Building>1337471172</Building>
+    </Item>
+  </ModOp>
+  <!--
+
+
+    Add Unhide Trigger
+
+    Trigger   : intermediate colony01 1.1
+
+
+  -->
+  <ModOp GUID="130237" Type="AddNextSibling">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1337471174</GUID>
+          <Name>intermediate colony01 1.1</Name>
+          <IconFilename>data/ui/2kimages/main/profiles/resident_colony_tier01.png</IconFilename>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000005</Context>
+                <CounterAmount>50</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
+                        <Asset>130106</Asset>
+                      </Item>
+                    </UnhideAssets>
+                    <UnlockAssets />
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+          <ResetTrigger>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <EmptyAutoCreateValue />
+            </Values>
+          </ResetTrigger>
+        </Trigger>
+        <TriggerSetup>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!--
+
+
+    Add Unhide Trigger Creative
+
+    Trigger   : intermediate colony01 1.1
+
+    GameMode  : Creative
+
+
+  -->
+  <ModOp GUID="11946" Type="AddNextSibling">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1337471175</GUID>
+          <Name>intermediate colony01 1.1</Name>
+          <IconFilename>data/ui/2kimages/main/profiles/resident_colony_tier01.png</IconFilename>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Values>
+              <ConditionPropsNegatable />
+              <Condition />
+              <ConditionIsCreativeMode />
+            </Values>
+            <Template>ConditionIsCreativeMode</Template>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <Item>
+                        <Asset>130106</Asset>
+                      </Item>
+                    </UnhideAssets>
+                    <UnlockAssets />
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+          <ResetTrigger>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <EmptyAutoCreateValue />
+            </Values>
+          </ResetTrigger>
+        </Trigger>
+        <TriggerSetup>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!--
+
+
+    Add Unlock Trigger
+
+    Trigger   : intermediate colony01 1.2
+
+
+  -->
+  <ModOp GUID="130238" Type="AddNextSibling">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1337471176</GUID>
+          <Name>intermediate colony01 1.2</Name>
+          <IconFilename>data/ui/2kimages/main/profiles/resident_colony_tier01.png</IconFilename>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionPlayerCounter</Template>
+            <Values>
+              <Condition />
+              <ConditionPlayerCounter>
+                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                <Context>15000005</Context>
+                <CounterAmount>100</CounterAmount>
+              </ConditionPlayerCounter>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets />
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>130106</Asset>
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+          <ResetTrigger>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <EmptyAutoCreateValue />
+            </Values>
+          </ResetTrigger>
+        </Trigger>
+        <TriggerSetup>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!--
+
+
+    Add Unlock Trigger Creative
+
+    Trigger   : intermediate moderate 2.1 (Trigger)
+
+    GameMode  : Creative
+
+
+  -->
+  <ModOp GUID="11951" Type="AddNextSibling">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1337471177</GUID>
+          <Name>intermediate colony01 1.2</Name>
+          <IconFilename>data/ui/2kimages/main/profiles/resident_colony_tier01.png</IconFilename>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Values>
+              <ConditionPropsNegatable />
+              <Condition />
+              <ConditionIsCreativeMode />
+            </Values>
+            <Template>ConditionIsCreativeMode</Template>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets />
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>130106</Asset>
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+          <ResetTrigger>
+            <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+            <Values>
+              <EmptyAutoCreateValue />
+            </Values>
+          </ResetTrigger>
+        </Trigger>
+        <TriggerSetup>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!--
+
+
+    iModYourAnno Tweaking
+
+
+  -->
+  <Include File="../../../../../include/tweaks.xml" />
+  <!--
+
+
+    That's all folks...
+
+
+  -->
+</ModOps>

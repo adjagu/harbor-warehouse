@@ -1,0 +1,7 @@
+1337471166 : Harbor Warehouse : OWCT : Building
+1337471167 : Harbor Warehouse : OWCT : InfoDescription
+
+1337471168 : Harbor Warehouse : OWCT : Unhide : Trigger
+1337471169 : Harbor Warehouse : OWCT : Unhide : Trigger Creative
+1337471170 : Harbor Warehouse : OWCT : Unlock : Trigger
+1337471171 : Harbor Warehouse : OWCT : Unlock : Trigger Creative

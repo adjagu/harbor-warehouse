@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+
+  Name    : Harbor Warehouse
+  Author  : adjagu
+  License : GPL-2.0-only
+  Version : 0.0.1
+
+
+-->
+<ModOps>
+
+  <ImyaTweaks Title="Attackable" />
+
+  <ModOp
+    GUID="1337471184"
+    Path="/Values/Attackable"
+    Type="Merge"
+    ModOpID="1337471184_MaximumHitPoints"
+  >
+    <MaximumHitPoints>3000</MaximumHitPoints>
+  </ModOp>
+
+  <ImyaExpose
+    Path="self::MaximumHitPoints"
+    ModOpID="1337471184_MaximumHitPoints"
+    ExposeID="Hit Points"
+    Description="Maximum hit points. Default is 3000."
+    Kind="Slider"
+  >
+    <SliderDefinition Min="3000" Max="9000" Stepping="50" />
+  </ImyaExpose>
+
+  <ModOp
+    GUID="1337471184"
+    Path="/Values/Attackable"
+    Type="Merge"
+    ModOpID="1337471184_MoralePower"
+  >
+    <MoralePower>25</MoralePower>
+  </ModOp>
+
+  <ImyaExpose
+    Path="self::MoralePower"
+    ModOpID="1337471184_MoralePower"
+    ExposeID="Morale"
+    Description="Morale power. Default is 25."
+    Kind="Slider"
+  >
+    <SliderDefinition Min="25" Max="200" Stepping="5" />
+  </ImyaExpose>
+
+  <ModOp
+    GUID="1337471184"
+    Path="/Values/Attackable"
+    Type="Merge"
+    ModOpID="1337471184_SelfHealPerHealTick"
+  >
+    <SelfHealPerHealTick>5</SelfHealPerHealTick>
+  </ModOp>
+
+  <ImyaExpose
+    Path="self::SelfHealPerHealTick"
+    ModOpID="1337471184_SelfHealPerHealTick"
+    ExposeID="Healing"
+    Description="Self heal per game tick. Default is 5."
+    Kind="Slider"
+  >
+    <SliderDefinition Min="5" Max="300" Stepping="5" />
+  </ImyaExpose>
+  <!--
+
+
+    That's all folks...
+
+
+  -->
+</ModOps>

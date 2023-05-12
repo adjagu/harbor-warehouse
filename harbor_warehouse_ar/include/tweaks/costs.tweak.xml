@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+
+  Name    : Harbor Warehouse
+  Author  : adjagu
+  License : GPL-2.0-only
+  Version : 0.0.1
+
+
+-->
+<ModOps>
+
+  <ImyaTweaks Title="Costs" />
+
+  <ModOp
+    GUID="1337471184"
+    Path="/Values/Cost/Costs/Item[Ingredient='1010017']"
+    Type="Merge"
+    ModOpID="1337471184_CostsCoins"
+  >
+    <Amount>2500</Amount>
+  </ModOp>
+
+  <ImyaExpose
+    Path="self::Amount"
+    ModOpID="1337471184_CostsCoins"
+    ExposeID="Coins"
+    Description="Build cost in coins. Default is 2500."
+    Kind="Slider"
+  >
+    <SliderDefinition Min="0" Max="2500" Stepping="10" />
+  </ImyaExpose>
+
+  <ModOp
+    GUID="1337471184"
+    Path="/Values/Cost/Costs/Item[Ingredient='1010196']"
+    Type="Merge"
+    ModOpID="1337471184_CostsTimber"
+  >
+    <Amount>10</Amount>
+  </ModOp>
+
+  <ImyaExpose
+    Path="self::Amount"
+    ModOpID="1337471184_CostsTimber"
+    ExposeID="Timber"
+    Description="Build cost in timber. Default is 10."
+    Kind="Slider"
+  >
+    <SliderDefinition Min="0" Max="10" Stepping="1" />
+  </ImyaExpose>
+
+  <ModOp
+    GUID="1337471184"
+    Path="/Values/Cost/Costs/Item[Ingredient='1010205']"
+    Type="Merge"
+    ModOpID="1337471184_CostsBricks"
+  >
+    <Amount>10</Amount>
+  </ModOp>
+
+  <ImyaExpose
+    Path="self::Amount"
+    ModOpID="1337471184_CostsBricks"
+    ExposeID="Bricks"
+    Description="Build cost in bricks. Default is 10."
+    Kind="Slider"
+  >
+    <SliderDefinition Min="0" Max="10" Stepping="1" />
+  </ImyaExpose>
+  <!--
+
+
+    That's all folks...
+
+
+  -->
+</ModOps>

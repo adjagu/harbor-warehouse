@@ -1,0 +1,7 @@
+1337471172 : Harbor Warehouse : NW : Building
+1337471173 : Harbor Warehouse : NW : InfoDescription
+
+1337471174 : Harbor Warehouse : NW : Unhide : Trigger
+1337471175 : Harbor Warehouse : NW : Unhide : Trigger Creative
+1337471176 : Harbor Warehouse : NW : Unlock : Trigger
+1337471177 : Harbor Warehouse : NW : Unlock : Trigger Creative

@@ -1,0 +1,7 @@
+1337471184 : Harbor Warehouse : AR : Building
+1337471185 : Harbor Warehouse : AR : InfoDescription
+
+1337471186 : Harbor Warehouse : AR : Unhide : Trigger
+1337471187 : Harbor Warehouse : AR : Unhide : Trigger Creative
+1337471188 : Harbor Warehouse : AR : Unlock : Trigger
+1337471189 : Harbor Warehouse : AR : Unlock : Trigger Creative

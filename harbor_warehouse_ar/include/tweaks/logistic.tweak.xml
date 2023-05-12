@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+
+  Name    : Harbor Warehouse
+  Author  : adjagu
+  License : GPL-2.0-only
+  Version : 0.0.1
+
+
+-->
+<ModOps>
+
+  <ImyaTweaks Title="Logistic" />
+
+  <ModOp
+    GUID="1337471184"
+    Path="/Values/LogisticNode"
+    Type="Merge"
+    ModOpID="1337471184_TransporterCountMax"
+  >
+    <TransporterCountMax>0</TransporterCountMax>
+  </ModOp>
+
+  <ImyaExpose
+    Path="self::TransporterCountMax"
+    ModOpID="1337471184_TransporterCountMax"
+    ExposeID="Count"
+    Description="Number of transporters. Should be less than processing queue. Default is 0."
+    Kind="Slider"
+  >
+    <SliderDefinition Min="0" Max="16" Stepping="1" />
+  </ImyaExpose>
+
+  <ModOp
+    GUID="1337471184"
+    Path="/Values/LogisticNode/QueueConfiguration"
+    Type="Merge"
+    ModOpID="1337471184_ProcessingQueueParallelCount"
+  >
+    <ProcessingQueueParallelCount>2</ProcessingQueueParallelCount>
+  </ModOp>
+
+  <ImyaExpose
+    Path="self::ProcessingQueueParallelCount"
+    ModOpID="1337471184_ProcessingQueueParallelCount"
+    ExposeID="Processing Queue"
+    Description="Number of transporters to process at the same time. Should be greater than transporter count. Default is 2 (with 0 transporters)."
+    Kind="Slider"
+  >
+    <SliderDefinition Min="2" Max="32" Stepping="1" />
+  </ImyaExpose>
+  <!--
+
+
+    The end.
+
+
+  -->
+</ModOps>

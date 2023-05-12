@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+
+  Name    : Harbor Warehouse
+  Author  : adjagu
+  License : GPL-2.0-only
+  Version : 0.0.1
+
+
+-->
+<ModOps>
+
+  <ImyaTweaks Title="Storage" />
+
+  <ModOp
+    GUID="1337471184"
+    Path="/Values/Warehouse/WarehouseStorage"
+    Type="Merge"
+    ModOpID="1337471184_StorageMax"
+  >
+    <StorageMax>100</StorageMax>
+  </ModOp>
+
+  <ImyaExpose
+    Path="self::StorageMax"
+    ModOpID="1337471184_StorageMax"
+    ExposeID="Amount"
+    Description="Amount of storage to add. Default is 100."
+    Kind="Slider"
+  >
+    <SliderDefinition Min="100" Max="1000" Stepping="25" />
+  </ImyaExpose>
+  <!--
+
+
+    The end.
+
+
+  -->
+</ModOps>
