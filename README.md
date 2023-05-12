@@ -19,8 +19,6 @@ These mods add a new building named "Harbor Warehouse". The harbor warehouse is 
   - Is buildable by AI controlled players
   - Road connection not required
 
-All mods have been tested on and work with [Anno 1800 v17.0.1222998](https://anno-union.com/updates/anno-1800-pc-game-update-17/).
-
 ## What Can Be Tweaked
 
 1. Attackable
