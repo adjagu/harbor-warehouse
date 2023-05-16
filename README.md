@@ -70,3 +70,4 @@ Below are the default install directories for various stores.
 
 - [Harbormaster](https://github.com/adjagu/harbormaster)
 - [Residences Provide Influence](https://github.com/adjagu/residences-provide-influence)
+- [Warehouse](https://github.com/adjagu/warehouse)
